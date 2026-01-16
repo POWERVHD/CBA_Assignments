@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Validation</title>
+</head>
+<body>
+
+  <form id="myForm">
+    <input type="text" id="name" placeholder="Enter name"><br><br>
+    <input type="email" id="email" placeholder="Enter email"><br><br>
+    <button type="submit">Submit</button>
+  </form>
+
+  <p id="message"></p>
+
+  <script>
+    let form = document.getElementById("myForm");
+    let message = document.getElementById("message");
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      let name = document.getElementById("name").value;
+      let email = document.getElementById("email").value;
+
+      if (name === "" || email === "") {
+        message.textContent = "Please fill all fields!";
+        message.style.color = "red";
+      } else {
+        message.textContent = "Form submitted successfully!";
+        message.style.color = "green";
+      }
+    });
+  </script>
+
+</body>
+</html>

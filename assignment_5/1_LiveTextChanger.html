@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Live Text Update</title>
+</head>
+<body>
+
+  <input type="text" id="inputBox" placeholder="Type something..." />
+
+  <p id="outputText"></p>
+
+  <script>
+    let input = document.getElementById("inputBox");
+    let paragraph = document.getElementById("outputText");
+
+    input.addEventListener("keyup", function () {
+      paragraph.textContent = input.value;
+    });
+  </script>
+
+</body>
+</html>
+
+
+

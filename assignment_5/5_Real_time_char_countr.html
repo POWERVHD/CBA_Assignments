@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Character Counter</title>
+</head>
+<body>
+
+  <textarea id="textArea" rows="5" cols="30" placeholder="Type here..."></textarea>
+
+  <p>Characters typed: <span id="count">0</span></p>
+
+  <script>
+    let textarea = document.getElementById("textArea");
+    let count = document.getElementById("count");
+
+    textarea.addEventListener("keyup", function () {
+      count.innerHTML = textarea.value.length;
+    });
+  </script>
+
+</body>
+</html>

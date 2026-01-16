@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Items to List</title>
+</head>
+<body>
+
+ 
+  <input type="text" id="itemInput" placeholder="Enter item">
+ 
+  <button id="addBtn">Add</button>
+
+  <ul id="itemList"></ul>
+
+  <script>
+    let input = document.getElementById("itemInput");
+    let button = document.getElementById("addBtn");
+    let list = document.getElementById("itemList");
+
+    button.addEventListener("click", function () {
+      
+      let li = document.createElement("li");
+
+      li.innerText = input.value;
+
+      list.appendChild(li);
+
+      input.value = "";
+    });
+  </script>
+
+</body>
+</html>

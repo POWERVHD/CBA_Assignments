@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Active Menu</title>
+
+  <style>
+    .navbar a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+
+    .active {
+      color: white;
+      background-color: blue;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="navbar">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </div>
+
+  <script>
+
+    let links = document.querySelectorAll(".navbar a");
+
+    
+    links.forEach(function (link) {
+      link.addEventListener("click", function () {
+
+        
+        links.forEach(function (item) {
+          item.classList.remove("active");
+        });
+
+        
+        this.classList.add("active");
+      });
+    });
+  </script>
+
+</body>
+</html>
