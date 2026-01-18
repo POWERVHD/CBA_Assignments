@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Image Hover Change </title>
+</head>
+<body>
+
+  <img src="image1.jpg" id="myImage" width="300"onmouseover="changeImage()" onmouseout="resetImage()">
+
+  <script>
+    function changeImage() {
+      document.getElementById("myImage").src = "image2.jpg";
+    }
+
+    function resetImage() {
+      document.getElementById("myImage").src = "image1.jpg";
+    }
+  </script>
+
+</body>
+</html>

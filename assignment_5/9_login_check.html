@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Login Check</title>
+</head>
+<body>
+
+  <input type="text" id="username" placeholder="Username"><br><br>
+  <input type="password" id="password" placeholder="Password"><br><br>
+  <button onclick="checkLogin()">Login</button>
+
+  <p id="message"></p>
+
+  <script>
+    function checkLogin() {
+        
+      let user = document.getElementById("username").value;
+      let pass = document.getElementById("password").value;
+      let message = document.getElementById("message");
+
+      if (user === "admin" && pass === "1234") {
+        message.innerText = "Login Successful";
+        message.style.color = "green";
+      } else {
+        message.innerText = "Invalid Username or Password";
+        message.style.color = "red";
+      }
+    }
+  </script>
+
+</body>
+</html>

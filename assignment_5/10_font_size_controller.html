@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Font Size Controller</title>
+</head>
+<body>
+
+  <p id="text">This is a sample text.</p>
+
+  <button onclick="increaseFont()"> a+ </button>
+  <button onclick="decreaseFont()"> a- </button>
+
+  <script>
+    let text = document.getElementById("text");
+    let fontSize = 16;
+
+    function increaseFont() {
+      fontSize += 2;
+      text.style.fontSize = fontSize + "px";
+    }
+
+    function decreaseFont() {
+      fontSize -= 2;
+      text.style.fontSize = fontSize + "px";
+    }
+  </script>
+
+</body>
+</html>
